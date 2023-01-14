@@ -1,8 +1,8 @@
 const express = require('express');
 require('dotenv').config();
 
-const {connection}=require('../day-12/config/db');
-const {user}=require("../day-12/Router/user.route");
+const {connection}=require('../userPanel/config/db');
+const {user}=require("../userPanel/Router/user.route");
 const app = express();
 app.use(express.json());
 app.use('/user',user);
@@ -25,5 +25,6 @@ console.log(`server is listining ${process.env.port}`);
     console.log(err);
 }
 })
+
 
 
